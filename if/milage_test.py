@@ -1,4 +1,4 @@
-from milage import *
+from if.milage import *
 
 run_cases = [
     (8, 50, 22, True),
