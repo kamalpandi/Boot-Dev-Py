@@ -15,5 +15,20 @@
 
 
 def meditate(mana, max_mana, energy, energy_potions):
-    print(f"---mana {mana}, energy {energy}, energy_potions {energy_potions}---")
-    return mana, energy, energy_potions
+    mana_needed = max_mana - mana
+    print("mana needed: ", mana_needed)
+
+    if mana == max_mana:
+        print("----")
+        return mana, energy, energy_potions
+
+    while mana < max_mana:
+        mana_from_energy = energy * 3  # used all energy
+        energy = 0
+
+        mana = mana_from_energy + mana
+        if mana == max_mana:
+            return mana, energy, energy_potions
+        elif mana > max_mana:
+            print("exceeds max mana")
+        return mana, energy, energy_potions
