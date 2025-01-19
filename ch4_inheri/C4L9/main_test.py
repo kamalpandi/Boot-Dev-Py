@@ -1,4 +1,4 @@
-from main import *
+from main import Wizard, Archer
 
 run_cases = [
     (
