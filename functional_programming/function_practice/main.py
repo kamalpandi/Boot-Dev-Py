@@ -1,10 +1,12 @@
 def hex_to_rgb(hex_color):
-    # ?
-    r = int(hex_color[:2], 10)
-    g = int(hex_color[2:4], 10)
-    b = int(hex_color[4:], 10)
-    return r, g, b
+    hex_str = str(hex_color)
+    if len(hex_str) == 6 and (is_hexadecimal(hex_str)):
+        r = int(hex_str[:2], 16)
+        g = int(hex_str[2:4], 16)
+        b = int(hex_str[4:], 16)
+        return r, g, b
 
+    raise Exception("not a hex color string")
 
 # Don't edit below this line
 
